@@ -69,7 +69,7 @@ python code/merge.py
 
 ## Pre-train and Finetune
 ### 1. Download the pretrain model 
-Download the (12/768 BERT-Base) binary file and move it to code/models/pretrain_base
+[Download](https://drive.google.com/drive/folders/176oFcnH-aRbEqsdJWsXoeLtkFt-o5a_S) the (12/768 BERT-Base) binary file and move it to code/models/pretrain_base
 
 ### 2. Re-pretrain from BERT-base
 ```
@@ -93,7 +93,7 @@ python evaluate.py dataset/test.json models/qa_out/predictions.json
 ```
 
 ## (Optional) Download the finetuned model
-You can also reproduce the results by downloading our finetuned models and trained graph embeddings, and then follow the steps. This can save your time.
+You can also reproduce the results by [downloading](https://drive.google.com/drive/folders/176oFcnH-aRbEqsdJWsXoeLtkFt-o5a_S) our finetuned models and trained graph embeddings, and then follow the steps. This can save your time.
 
 ### 1. Unzip and move the files
 Move the zip files to corresponding location (code/models/qa_out, preprocess/acekg, preprocess/acekg_embed) and unzip them to cover the original folders.
