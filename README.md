@@ -93,7 +93,7 @@ python evaluate.py dataset/test.json models/qa_out/predictions.json
 ```
 
 ## (Optional) Download the finetuned model
-You can also reproduce the results by [downloading](https://drive.google.com/drive/folders/176oFcnH-aRbEqsdJWsXoeLtkFt-o5a_S) our finetuned models and trained graph embeddings, and then follow the steps. This can save your time.
+You can also reproduce the results by [downloading](https://drive.google.com/drive/folders/176oFcnH-aRbEqsdJWsXoeLtkFt-o5a_S) our finetuned models and trained graph embeddings (quick_check.zip), and then follow the steps. This can save your time.
 
 ### 1. Unzip and move the files
 Move the zip files to corresponding location (code/models/qa_out, preprocess/acekg, preprocess/acekg_embed) and unzip them to cover the original folders.
