@@ -107,3 +107,6 @@ python evaluate.py dataset/test.json models/qa_out/predictions.json
 ```
 
 The EM/F1(%) should be 67.63/72.75 as shown in the paper.
+
+## About the dataset
+Currently only the old version literatureQA dataset that includes 7,000 abstracts and 140,000 QA pairs is provided at this repo, and you can find it in code/raw_dataset/.
