@@ -116,5 +116,5 @@ def build_ent_dataset(intput_file, output_file):
 
 
 if __name__ == "__main__":
-    build_ent_dataset("../raw_dataset/train.json", "../dataset/train.json")
-    build_ent_dataset("../raw_dataset/test.json", "../dataset/test.json")
+    build_ent_dataset("../code/raw_dataset/train.json", "../code/dataset/train.json")
+    build_ent_dataset("../code/raw_dataset/test.json", "../code/dataset/test.json")
