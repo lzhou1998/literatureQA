@@ -1,6 +1,7 @@
 import json
 from tqdm import tqdm
 import pymysql
+import os
 
 IS_LARGE = False
 
@@ -153,6 +154,12 @@ def main():
     # Relation type: 1 paper-paper(cite), 2 paper-venue(publish_on), 3 paper-author(written_by), 
     #                4 paper-affiliation(publish_by), 5 paper-field(is_in), 6 field-field(is_subfield_of)
 
+    # create empty folders
+    if not os.path.exists("acekg"):
+        os.makedirs("acekg")
+    if not os.path.exists("acekg_embed"):
+        os.makedirs("acekg_embed")
+
     # Connecting database
     db = pymysql.connect(
         host="202.120.36.29",
@@ -181,9 +188,9 @@ def main():
         with open("acekg/cs_papers_id.json", "r") as f:
             cs_papers_id = json.loads(f.read())
     except FileNotFoundError:
-        with open("../code/dataset/train.json", "r", encoding='utf-8') as f:
+        with open("../code/raw_dataset/train.json", "r", encoding='utf-8') as f:
             paperQA_dataset = json.loads(f.read())
-        with open("../code/dataset/test.json", "r", encoding='utf-8') as f:
+        with open("../code/raw_dataset/test.json", "r", encoding='utf-8') as f:
             paperQA_dataset += json.loads(f.read())
         init_papers = [item["am_id"] for item in paperQA_dataset]
         if not IS_LARGE:
@@ -260,10 +267,10 @@ def main():
             f.write(str(len(cs_trains)) + "\n")
             for cs_train in cs_trains:
                 f.write(str(entity2id[cs_train[0]]) + " " + str(entity2id[cs_train[1]]) + " " + str(relation2id[cs_train[2]]) + "\n")
-        with open("acekg/entity_map.txt", "w") as f:
+        with open("entity_map.txt", "w") as f:
             for cs_entity in cs_entities:
                 f.write("Q" + str(cs_entity) + "\t" + "Q" + str(cs_entity) + "\n")
-        with open("acekg/alias_entity.txt", "w") as f:
+        with open("alias_entity.txt", "w") as f:
             for cs_entity in cs_entities:
                 f.write("Q" + str(cs_entity) + "\t" + "Q" + str(cs_entity) + "\n")
 
