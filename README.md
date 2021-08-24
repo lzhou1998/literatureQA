@@ -12,6 +12,7 @@ This repo is partially based on [BERT](https://github.com/google-research/bert),
 + pymysql
 + tensorflow2
 + nltk
++ tensorboardX
 
 Due to some reasons, we use tensorflow2 to process data in some scripts.
 
