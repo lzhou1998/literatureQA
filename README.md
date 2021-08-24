@@ -54,7 +54,7 @@ python build_corpus.py
 ```
 
 ### (Optional) 5. Annotate LiteratureQA dataset
-This can be skip because we have already put annotated files into code/dataset
+This can be skip because we have already put annotated files into code/dataset.
 ```
 python annotate_dataset.py
 ```
@@ -79,7 +79,7 @@ python code/merge.py
 
 ## Pre-train and Finetune
 ### 1. Download the pretrain model 
-[Download](https://drive.google.com/drive/folders/176oFcnH-aRbEqsdJWsXoeLtkFt-o5a_S) the (12/768 BERT-Base) binary file and move it to code/models/pretrain_base
+[Download](https://drive.google.com/drive/folders/176oFcnH-aRbEqsdJWsXoeLtkFt-o5a_S) the (12/768 BERT-Base) binary file and move it to code/models/pretrain_base.
 
 ### 2. Re-pretrain from BERT-base
 ```
