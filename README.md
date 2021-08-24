@@ -3,19 +3,28 @@
 Source code and dataset for "LiteratureQA: A Question Answering Corpus with Graph Knowledge on Academic Literature".
 This repo is partially based on [BERT](https://github.com/google-research/bert), [Huggingface-transformers](https://github.com/huggingface/pytorch-pretrained-BERT) and [ERNIE](https://github.com/thunlp/ERNIE), and we thank for their great works.
 
-## Reqirements
-+ Python3
+## Requirements
++ Python3.7
 + Pytorch>=0.4.1
 + tqdm
 + boto3
 + requests
 + pymysql
++ tensorflow2
++ nltk
+
+Due to some reasons, we use tensorflow2 to process data in some scripts.
+
+Quick install by following command.
+```
+pip install -r requirement.txt
+```
 
 ## Prepare Graph Embeddings And Pre-train Data
 
 ### 1. Build KG 
 Note that a large version KG with 35x number of papers is also provided, set the IS_LARGE into true in build_kg.py to activate.
-This is not recommended because it will notably increase the time consume of graph embedding process.
+This is not recommended because it will notably increase the time consumation of graph embedding process.
 
 ```
 cd preprocess
@@ -24,6 +33,7 @@ python build_kg.py
 
 ### 2. Compile training execute file of transE
 To speed up graph embedding process, we use the highly optimization version of transE from [Fast-TransX](https://github.com/thunlp/Fast-TransX).
+In some cases, it may occur warnings when compile, and you can ignore them.
 
 ```
 g++ transE.cpp -o transE -pthread -march=native
