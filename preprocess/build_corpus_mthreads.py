@@ -2,6 +2,7 @@ import json
 from tqdm import tqdm
 import pymysql
 import threading
+import os
 
 
 def fetch_by_part(cursor, statement, remove_tuple=False, fetch_num=100000):
@@ -107,6 +108,10 @@ def main():
         db="am_paper"
     )
     cursor = db.cursor()
+
+    # create an empty folder
+    if not os.path.exists("corpus"):
+        os.makedirs("corpus")
 
     # Loading entity id
     with open("acekg/cs_papers_id.json", "r") as f:
