@@ -89,11 +89,14 @@ python code/run_pretrain.py --do_train --data_dir preprocess/merge --bert_model 
 
 ### 3. Finetune for QA task on LiteratureQA dataset
 ```
+cp code/models/pretrain_base/{*.txt,*.json} code/models/pretrain_out/
 python code/run_qa.py --do_train
 ```
 
 ### 4. Run prediction on the test set
+Uncomment and run the first line if no config files in the model folder.
 ```
+# cp code/models/pretrain_base/{*.txt,*.json} code/models/qa_out/
 python code/run_qa.py --do_predict --qa_model code/models/qa_out
 ```
 
