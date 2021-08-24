@@ -21,7 +21,7 @@ Quick install by following command.
 pip install -r requirement.txt
 ```
 
-## Prepare Graph Embeddings And Pre-train Data
+## Prepare graph embeddings and pre-train data
 
 ### 1. Build KG 
 Note that a large version KG with 35x number of papers is also provided, set the IS_LARGE into true in build_kg.py to activate.
