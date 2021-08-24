@@ -96,7 +96,7 @@ python code/run_qa.py --do_train
 python code/run_qa.py --do_predict --qa_model code/models/qa_out
 ```
 
-### 5. Evaluate the prediction result of LiteratureQA test set to reproduce the F1 & EM score.
+### 5. Evaluate the prediction result of LiteratureQA test set to reproduce the F1 & EM score
 ```
 cd code
 python evaluate.py dataset/test.json models/qa_out/predictions.json
