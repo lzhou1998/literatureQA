@@ -1,7 +1,7 @@
 # Literature QA
 
 Source code and dataset for "LiteratureQA: A Question Answering Corpus with Graph Knowledge on Academic Literature".
-This repo is partially based on [BERT](https://github.com/google-research/bert), [Huggingface-transformers](https://github.com/huggingface/pytorch-pretrained-BERT) and [ERNIE](https://github.com/thunlp/ERNIE), and we thank for their great works.
+This repo is partially based on [BERT](https://github.com/google-research/bert), [PyTorch version of BERT](https://github.com/huggingface/pytorch-pretrained-BERT) and [ERNIE](https://github.com/thunlp/ERNIE), and we thank for their great works.
 
 ## Requirements
 + Python3.7
